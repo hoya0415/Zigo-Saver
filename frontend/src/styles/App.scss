@@ -1,0 +1,92 @@
+$black: #333333;
+$grey80: #535353;
+$grey50: #7d7d7d;
+$grey30: #a3a3a3;
+$red: #fd4e5f;
+$red50: #fd4e5f50;
+$red16: #fd4e5f16;
+$yellow: #fec802;
+$yellow50: #fec80250;
+$yellow16: #fec80216;
+$sky: #6694cc;
+$sky50: #b2c9e5;
+$sky16: #6694cc16;
+$purple10: #f4eefc;
+$purple30: #d3bef0;
+$purple50: #989ef2;
+$purple80: #6779d4;
+$purple100: #4654b4;
+$purple200 :#25317e;
+
+@font-face {
+  font-family: 'Dung';
+  src: url('../assets/fonts/DungGeunMo.ttf');
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+// 상단 배너
+.location-banner {
+  position: fixed;
+  animation: fadein 1s;
+  text-transform: uppercase;
+  top: 8vmin;
+  left: 50%;
+  width: 40vmin;
+  font-size: 4vmin;
+  line-height: 3;
+  text-align: center;
+  color: $purple200;
+  transform: translate(-50%, -50%);
+  background-image: url('../assets/loca_banner.png');
+  background-repeat: no-repeat;
+  background-size: 38vmin auto;
+  background-position: center;
+  text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
+}
+// 모달 제목, x 버튼 있는 곳
+.modal-top-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vmin auto;
+  width: 85%;
+  .modal-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: $purple200;
+    font-weight: 600;
+    font-size: 3vmin;
+    text-shadow: -0.2vmin 0 #fff, 0 0.2vmin #fff, 0.2vmin 0 #fff, 0 -0.2vmin #fff;
+  }
+  .modal-x-img-con {
+    text-align: end;
+    img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+}
+* {
+  font-family: 'Dung', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  box-sizing: border-box;
+}
+
+@import '~bootstrap/scss/bootstrap';
+@import './Account';
+@import './Main';
+@import './Nav';
+@import './Forest';
+@import './Loading';
+@import './Exchange';
+@import './Shop';
+@import './Profile';
+@import './Spinner';

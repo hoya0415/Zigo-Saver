@@ -1,0 +1,447 @@
+.unity {
+  background: none;
+  overflow: hidden;
+  z-index: -1;
+}
+.road-back {
+  animation: fadein 1s;
+  background-image: url(../assets/forestroad.png);
+  width: 100vw;
+  background-repeat: repeat-y;
+  background-size: 100vw auto;
+  background-position: center top;
+  .forest-item-con {
+    width: 55vw;
+    margin: auto;
+    padding: 4vw 1vw 15vw 1vw;
+    .forest-item {
+      font-size: 2vw;
+      text-transform: uppercase;
+      line-height: 2;
+      color: $purple100;
+      background-color: #ffcb3c;
+      box-shadow: -0.3vw 0 #fff, 0 0.3vw #fff, 0.3vw 0 #fff, 0 -0.3vw #fff;
+      text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
+      margin: 4vw;
+      text-align: center;
+      width: 10vw;
+      cursor: pointer;
+      transition: transform 300ms ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    :nth-child(1) {
+      margin-top: 17vw;
+      margin-left: 0px;
+    }
+    :nth-child(7n + 2) {
+      margin-top: 8vw;
+      margin-left: auto;
+      margin-right: 6vw;
+    }
+    :nth-child(7n + 3) {
+      margin-top: 24.5vw;
+      margin-left: 6vw;
+    }
+    :nth-child(7n + 4) {
+      margin-top: 19vw;
+      margin-left: auto;
+      margin-right: 6vw;
+    }
+    :nth-child(7n + 5) {
+      margin-top: 25vw;
+      margin-left: auto;
+      margin-right: 6vw;
+    }
+    :nth-child(7n + 6) {
+      margin-top: 20vw;
+      margin-left: 6vw;
+    }
+    :nth-child(7n + 7) {
+      margin-top: 255px;
+      margin-left: auto;
+      margin-right: 20px;
+    }
+    :nth-child(7n + 8) {
+      margin-top: 710px;
+      margin-left: 10px;
+    }
+  }
+  .forest-character {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      width: 7vw;
+    }
+  }
+}
+
+.forest-exit-con{
+  text-align: center;
+  .forest-exit {
+    margin-bottom: 20px;
+    margin-left: 9vmin;
+    animation: fadein 1s;
+    text-transform: uppercase;
+    width: 19vmin;
+    font-size: 4vmin;
+    line-height: 1.5;
+    text-align: center;
+    color: $purple200;
+    background-image: url('../assets/exitbox.png');
+    background-repeat: no-repeat;
+    background-size: 20vmin auto;
+    background-position: center;
+    text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
+    border-radius:  13px;
+    p {
+      margin-bottom:0;
+      transition: transform 300ms ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+
+// ===================================> 상세숲
+.forest {
+  animation: fadein 1s;
+  .forest-status {
+    z-index: 100;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    min-width: 20vmin;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: -0.65vmin 0 $purple200, 0 0.65vmin $purple200,
+      0.65vmin 0 $purple200, 0 -0.65vmin $purple200;
+    padding: 1vmin;
+    color: $purple200;
+    background-color: $purple10;
+    cursor: pointer;
+    h4 {
+      margin: 1vmin auto;
+      font-size: 2.5vmin;
+      text-transform: uppercase;
+    }
+    .forest-status-btn {
+      font-size: 2.5vmin;
+      margin: 0.5vmin;
+      img {
+        width: 5vmin;
+      }
+    }
+    .forest-status-dona-btn {
+      background-color: #ffe6a0;
+      font-size: 2.5vmin;
+      box-shadow: -0.3vmin 0 $purple100, 0 0.3vmin $purple100,
+        0.3vmin 0 $purple100, 0 -0.3vmin $purple100;
+      margin: 1vmin 0.5vmin;
+      color: $purple200;
+    }
+  }
+}
+
+// ===================================> 숲 현황 모달
+
+.forest-status-modal-box {
+  // 하단 전체
+  .forest-status-modal-img-con {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    // 씨앗 개수, 나무 개수 있는 박스
+    .cnt-fld {
+      position: absolute;
+      left: 0;
+      z-index: 110;
+      color: $purple10;
+      text-shadow: -0.25vmin 0 $purple100, 0 0.25vmin $purple100,
+        0.25vmin 0 $purple100, 0 -0.25vmin $purple100;
+      font-size: 3vmin;
+      width: 20vmin;
+      padding: 0.5vmin 3.5vmin 3.5vmin 0.5vmin;
+      .cnt-fld-item {
+        display: flex;
+        align-items: center;
+      }
+      img {
+        width: 4vmin;
+        margin: 0.8vmin;
+      }
+    }
+    // 명예의 전당 모달 버튼
+    .plant-top-list-btn {
+      display: inline;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 3vmin 3vmin 5vmin 3vmin;
+      cursor: pointer;
+      z-index: 120;
+      text-align: end;
+      img {
+        width: 7vmin;
+        transition: transform 300ms ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .floor-fld {
+      cursor: url('../assets/floor_seed4.cur') 23 21, pointer;
+      text-align: center;
+    }
+    // 판
+    .forest-status-floor {
+      width: 95%;
+      height: auto;
+      object-fit: cover;
+      z-index: 50;
+    }
+    // 판 위에 올라가있는 새싹
+    .seed-con {
+      animation: fadein 1s;
+      position: absolute;
+      z-index: 100;
+    }
+  }
+}
+:focus-visible {
+  outline: none;
+}
+
+// ===================================> 씨앗 심기 모달
+
+.forest-seed-modal-box {
+  .forest-seed-modal-top-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vmin;
+    .forest-seed-modal-title {
+      text-align: center;
+      color: $purple100;
+    }
+    .forest-seed-modal-x-img-con {
+      display: flex;
+      flex-direction: row-reverse;
+      img {
+        width: 2.5vmin;
+        height: 2.5vmin;
+        cursor: pointer;
+      }
+    }
+  }
+  .plant-seed-fld {
+    h4 {
+      font-size: 2vmin;
+      text-align: center;
+    }
+    h5 {
+      font-size: 1.4vmin;
+      color: grey;
+      text-align: center;
+    }
+    .seed-input-con {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 3vmin auto;
+      width: 100%;
+      .minus,
+      .plus {
+        cursor: pointer;
+        text-align: center;
+        font-size: 4.5vmin;
+        color: $purple100;
+      }
+      .seed-input {
+        width: 15vmin;
+        text-align: center;
+        color: $purple100;
+        font-size: 3vmin;
+        border: none;
+        margin: auto 1vmin;
+        background-color: $purple10;
+        box-shadow: -0.5vmin 0 $purple50, 0 0.5vmin $purple50,
+          0.5vmin 0 $purple50, 0 -0.5vmin $purple50;
+        display: inline-block;
+        vertical-align: middle;
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .seed-btn-con {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .seed-btn {
+      font-size: 1.8vmin;
+      font-weight: bold;
+      margin: 1vmin;
+      color: #ffff;
+      background-color: $purple80;
+      width: 14vmin;
+      height: 5vmin;
+      border: none;
+      border-radius: 2.4vmin;
+    }
+  }
+}
+
+// ===================================> 명예의 전당 모달
+.forest-toplist-modal-box {
+  // 모달 제목, x 버튼 있는 곳
+  .forest-toplist-modal-top-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vmin;
+    .forest-toplist-modal-title {
+      text-align: center;
+      color: #fff;
+    }
+    .forest-toplist-modal-x-img-con {
+      display: flex;
+      flex-direction: row-reverse;
+      img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+  // 하단 전체
+  .forest-toplist-modal-img-con {
+    width: 90%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    padding: 1.5vmin;
+    flex-direction: column;
+    text-align: center;
+    margin: 2vmin auto;
+    overflow-y: scroll;
+    background-color: rgba(255, 255, 255, 0.909);
+    border-radius: 1.5vmin;
+    .toplist-item {
+      display: flex;
+      align-items: center;
+      color: $purple100;
+      margin-top: 1.5vmin;
+    }
+    .toplist-item-rank {
+      font-size: 2vmin;
+      font-weight: bold;
+    }
+    .toplist-item-user {
+      display: flex;
+      align-items: center;
+      .toplist-item-user-img-con {
+        width: 4vmin;
+        height: 4vmin;
+        background-color: $purple50;
+        border: 0.2vmin solid $purple100;
+        border-radius: 3vmin;
+        overflow: hidden;
+        margin: auto 0.8vmin;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .toplist-item-tree {
+      display: flex;
+      align-items: center;
+      font-size: 2vmin;
+      font-weight: bold;
+      img {
+        width: 3.5vmin;
+        margin: auto 0.8vmin;
+      }
+    }
+  }
+}
+// ==========================================> 채팅
+.chatbox {
+  height: 50vmin;
+  width: 40vmin;
+  border-radius: 2.5vmin;
+  background-color: rgba(253, 253, 253, 0.5);
+  padding: 2.5vmin;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .render-chat {
+    color: $purple200;
+    overflow-y: scroll;
+    height: 100%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    h6 {
+      margin-bottom: 1.5vmin;
+      padding: 1vmin;
+      background-color: rgb(249, 248, 255);
+      border-radius: 1vmin;
+      font-size: 2.2vmin;
+      span {
+        margin-left: 1vmin;
+      }
+    }
+    .myname {
+      color: $red;
+      background-color: rgb(255, 247, 247);
+    }
+  }
+  .chat-input {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    padding: 10px;
+    .chat-send-input {
+      width: 100%;
+      .MuiInputBase-input {
+        font-size: 2.2vmin;
+        padding: 1.5vmin;
+        color: $purple200;
+        font-family: 'Dung';
+      }
+      .MuiInput-underline:after {
+        border-bottom: 0.2vmin solid rgb(135, 135, 135);
+        &:after {
+          border-bottom: 0.2vmin solid $purple100;
+        }
+      }
+    }
+    .chat-send-btn {
+      background-color: $purple100;
+      width: 13vmin;
+      font-size: 2.8vmin;
+      padding: 0.5vmin;
+      margin: 1vmin;
+      border-radius: 1vmin;
+      color: #fff;
+      border: none;
+    }
+  }
+}

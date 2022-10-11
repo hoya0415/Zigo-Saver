@@ -1,0 +1,59 @@
+.main {
+  animation: fadein 1s;
+  background-image: url('../assets/main_back_back.png');
+  width: 100vw;
+  height: 100vh;
+  .main-back {
+    background-image: url('../assets/main_back2.png');
+    width: 80vh;
+    height: 80vh;
+    max-width: 80vw;
+    max-height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .main-move-btn-con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    .main-move-btn {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      padding: 2vh 2vh 14vh 2vh;
+      font-size: 30px;
+      &:hover {
+        img {
+          transition: transform 300ms ease;
+          transform: scale(1.1);
+        }
+      }
+      .main-move-banner {
+        width: 22vh;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .main-move-shop {
+      bottom: -20vh;
+      left: -27vh;
+    }
+    .main-move-exchange {
+      bottom: -20vh;
+      left: 27vh;
+    }
+    .main-move-forest {
+      bottom: 3vh;
+    }
+    .main-move-profile {
+      bottom: -50vh;
+    }
+  }
+}

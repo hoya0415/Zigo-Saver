@@ -1,0 +1,467 @@
+// ============================================== > 환전소 본체
+.exchange {
+  animation: fadein 1s;
+  background-color: #ebe1bc;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  .exchange-back {
+    background-image: url('../assets/exchange.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+  }
+}
+
+.banner-open-btn-con {
+  width: 100%;
+  .banner-open-npc1 {
+    width: 400px;
+    height: 450px;
+    position: absolute;
+    top: 17vmin;
+    left: 17vmin;
+    z-index: 100;
+    background-color: #fff;
+    // cursor: pointer;
+    opacity: 0;
+  }
+  .banner-open-npc2 {
+    width: 400px;
+    height: 450px;
+    position: absolute;
+    top: 17vmin;
+    right: 18vmin;
+    z-index: 100;
+    background-color: #fff;
+    opacity: 0;
+  }
+}
+.npc-modal-x-img-con {
+  display: flex;
+  flex-direction: row-reverse;
+  img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+}
+.npcmodal {
+  z-index: 0;
+}
+.npcmodal-btn1 {
+  text-decoration: none;
+  .MuiButton-root {
+    color: black;
+    font-family: 'Dung' !important;
+  }
+}
+.npcmodal-btn2 {
+  text-decoration: none;
+  .MuiButton-root {
+    color: black;
+    font-family: 'Dung' !important;
+  }
+}
+// ============================================== > 포인트 환전 모달
+.point-modal {
+  .MuiButtonBase-root {
+    font-family: 'Dung';
+    font-size: large;
+  }
+  .point-tab-list {
+    .MuiTabs-flexContainer {
+      justify-content: space-around;
+    }
+  }
+}
+
+
+.exchange-exit {
+  position: fixed;
+  bottom:8vmin;
+  animation: fadein 1s;
+  text-transform: uppercase;
+  left: calc(50% - 9.5vmin);
+  width: 19vmin;
+  font-size: 4vmin;
+  line-height: 1.5;
+  text-align: center;
+  color: $purple200;
+  background-image: url('../assets/exitbox.png');
+  background-repeat: no-repeat;
+  background-size: 20vmin auto;
+  background-position: center;
+  text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
+  border-radius:  13px;
+  p {
+    margin-bottom:0;
+    transition: transform 300ms ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// ============================================== > 포인트 충전 탭
+
+// 포인트 라디오 선택
+.radio-buttons-group-label {
+  height: 35vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .MuiFormLabel-root {
+    font-family: 'Dung';
+  }
+  h3 {
+    font-size: 2vmin;
+    text-align: start;
+    color: $purple100;
+  }
+}
+.radio-buttons-group {
+  width: 35vmin;
+  .MuiTypography-root {
+    font-family: 'Dung';
+    width: 100%;
+  }
+  .MuiFormControlLabel-root {
+    margin: 0;
+    border-width: 0 0.2vmin 0.2vmin 0.2vmin;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    &:nth-child(1) {
+      border: 0.2vmin solid rgb(192, 192, 192);
+      border-radius: 1.5vmin 1.5vmin 0 0;
+    }
+    &:last-child {
+      border-width: 0 0.2vmin 0.2vmin 0.2vmin;
+      border-style: solid;
+      border-color: rgb(192, 192, 192);
+      border-radius: 0 0 1.5vmin 1.5vmin;
+    }
+    &:hover {
+      border: 0.2vmin solid $purple100;
+    }
+  }
+  .selected {
+    border: 0.2vmin solid $purple100;
+  }
+  .expoint-label-con {
+    margin: 1vmin;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8vmin;
+    .expoint-label-p {
+      color: $purple100;
+      font-weight: bold;
+    }
+    .expoint-label-c {
+      color: rgb(157, 157, 157);
+    }
+  }
+}
+
+.choice-point {
+  float: left;
+  text-align: center;
+}
+
+.after-point {
+  width: 40vmin;
+  float: right;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1vmin;
+  margin: 7vmin 0;
+}
+.after-point-text {
+  margin-left: 3vmin;
+}
+.pay-btn {
+  font-size: 3.5vmin;
+  margin-top: 8vmin;
+  margin-left: 6vmin;
+  text-align: center;
+  color: #ffff;
+  background-color: #6779d4;
+  width: 20vmin;
+  height: 7vmin;
+  border: none;
+  border-radius: 2.4vmin;
+}
+.pay-alert {
+  display: flex;
+  justify-content: center;
+  width: 50vmin;
+  margin-left: 30vmin;
+  margin-bottom: 3vmin;
+}
+.pay-tabpanel {
+  .MuiTabPanel-root {
+    padding: 3vmin;
+  }
+}
+// ============================================== > 포인트 충전 탭
+
+.payback-title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 3vmin 1vmin;
+}
+.payback-point-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  width: 80%;
+  margin: auto;
+}
+.payback-points {
+  display: flex;
+  justify-content: space-evenly;
+}
+.payback-point {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7vmin;
+  margin-bottom: 3vmin;
+  input {
+    text-align: center;
+  }
+}
+
+.payback-input {
+  width: 15vmin;
+  border-color: #6779d4;
+  border-radius: 1vmin;
+}
+
+// 환급 에러 메세지
+.payback-least {
+  color: rgb(239, 77, 77);
+}
+
+.payback-btn {
+  font-size: 3vmin;
+  margin: 0px 0px 0px 3.5vmin;
+  color: #ffff;
+  background-color: #6779d4;
+  width: 20vmin;
+  height: 7vmin;
+  border: none;
+  border-radius: 2.4vmin;
+}
+.payback-ask {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10vmin;
+  h3 {
+    font-size: 3vmin;
+  }
+}
+.payback-ask-btns {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 13vmin;
+}
+.payback-ask-btn1 {
+  font-size: 3vmin;
+  color: #ffff;
+  background-color: #6779d4;
+  width: 20vmin;
+  height: 7vmin;
+  border: none;
+  border-radius: 2.4vmin;
+}
+.payback-ask-btn2 {
+  font-size: 3vmin;
+  color: #ffff;
+  background-color: #6779d4;
+  width: 20vmin;
+  height: 7vmin;
+  border: none;
+  border-radius: 2.4vmin;
+}
+
+// 포인트 환급 다음 버튼
+.payback-btn-fin {
+  font-size: 3vmin;
+  color: #ffff;
+  background-color: #6779d4;
+  width: 20vmin;
+  height: 7vmin;
+  border: none;
+  border-radius: 2.4vmin;
+  margin-left: auto;
+}
+.payback-btn-fin-disabled {
+  font-size: 3vmin;
+  color: #ffff;
+  width: 20vmin;
+  height: 7vmin;
+  border: none;
+  border-radius: 2.4vmin;
+  background-color: #9d9d9d;
+  margin-left: auto;
+}
+.payback-acctitle {
+  margin-top: 5vmin;
+  text-align: center;
+}
+.payback-account {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 7vmin;
+}
+.payback-account-info {
+  float: left;
+  text-align: center;
+}
+.payback-accinfo {
+  margin-bottom: 3vmin;
+}
+.payback-account-inputs {
+  float: right;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 5vmin;
+}
+.payback-accinput {
+  width: 25vmin;
+  border-color: #6779d4;
+  border-radius: 1vmin;
+  margin-bottom: 3vmin;
+}
+
+.payback-submit {
+  font-size: 3.5vmin;
+  color: #ffff;
+  background-color: #6779d4;
+  width: 20vmin;
+  height: 7vmin;
+  border: none;
+  border-radius: 2.4vmin;
+  margin: 2vmin 0 0 33vmin;
+}
+
+.payback-done {
+  font-size: 3.6vmin;
+  text-align: center;
+  margin: 13vmin 0px 9vmin 0px;
+}
+
+// ============================================== > 씨앗 환전 모달
+
+.seed-title {
+  text-align: center;
+  margin-bottom: 5vmin;
+  font-size: 4.8vmin;
+}
+.seed-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 2vmin;
+  border-radius: 2.5vmin;
+}
+.seed-content-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 1vmin;
+  h3 {
+    font-size: 2.5vmin;
+  }
+}
+.seed-buy-input-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .minus,
+  .plus {
+    cursor: pointer;
+    text-align: center;
+    font-size: 5.5vmin;
+    color: $purple100;
+  }
+  .seed-buy-input {
+    width: 50%;
+    text-align: center;
+    color: $purple100;
+    font-size: 3vmin;
+    border: none;
+    margin: auto 1vmin;
+    background-color: $purple10;
+    box-shadow: -4px 0 $purple50, 0 4px $purple50, 4px 0 $purple50,
+      0 -4px $purple50;
+    display: inline-block;
+    vertical-align: middle;
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+.seed-buy-btn {
+  font-size: 3.5vmin;
+  color: #ffff;
+  width: 20vmin;
+  height: 7vmin;
+  border: none;
+  border-radius: 2.4vmin;
+  margin: 1vmin auto;
+  background-color: #9d9d9d;
+  margin-left: 32vmin;
+}
+.buy-done-text {
+  font-size: 3vmin;
+}
+.seed-buy-btn-done {
+  font-size: 3vmin;
+  color: #ffff;
+  width: 15vmin;
+  height: 7vmin;
+  border: none;
+  border-radius: 2.4vmin;
+  margin: 3vmin auto;
+  background-color: #9d9d9d;
+}
+.active-btn {
+  background-color: #6779d4;
+}
+.buy-done {
+  font-size: 3.6vmin;
+  text-align: center;
+  padding: 13vmin 0 9vmin 0;
+  background-color: #fff;
+  border-radius: 2.4vmin;
+}
+.payback-account-inputs{
+  .MuiFormControl-root{
+    margin: none;
+  }
+  .MuiSelect-select{
+    font-family: 'Dung';
+  }
+}

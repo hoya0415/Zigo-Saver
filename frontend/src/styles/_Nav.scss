@@ -1,0 +1,165 @@
+.main-nav {
+  animation: fadein 1s;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 20px;
+  align-items: flex-start;
+  z-index: 100;
+  .nav-item {
+    display: flex;
+    align-items: center;
+    margin: 30px 25px 0 0;
+    font-size: 4vmin;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-shadow: -3px 0 $purple200, 0 3px $purple200, 3px 0 $purple200,
+      0 -3px $purple200;
+    .nav-item-charac-img-con {
+      background-color: $purple10;
+      border-radius: 50px;
+      border: 0.5vh solid $purple100;
+      width: 8vh;
+      height: 8vh;
+      margin: auto 20px auto 25px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      align-items: center;
+      overflow: hidden;
+      img {
+        width: 8vh;
+        padding-top: 2vh;
+      }
+    }
+    .nav-item-img-con {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      margin: auto 15px auto 30px;
+      width: 6.5vh;
+      height: 6.5vh;
+      background-color: $purple10;
+      box-shadow: -0.5vh 0 $purple100, 0 0.5vh $purple100, 0.5vh 0 $purple100,
+        0 -0.5vh $purple100;
+      img {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        transition: transform 300ms ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      .MuiBadge-badge {
+        background-color: $red;
+        font-size: 18px;
+        font-weight: bold;
+        text-shadow: none;
+        width: 35px;
+        height: 35px;
+        color: yellow;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+.minimap-modal-img-con {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2.5vmin;
+  }
+  .minimap-move-btn-con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    .minimap-move-btn {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      padding: 0px 0px 5.5vh 0px;
+      font-size: 3vmin;
+      &:hover {
+        img {
+          transition: transform 300ms ease;
+          transform: scale(1.1);
+        }
+      }
+      .minimap-move-banner {
+        width: 15vmin;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .minimap-move-shop {
+      top: -4vmin;
+      left: -13vmin;
+    }
+    .minimap-move-exchange {
+      top: -4vmin;
+      left: 13vmin;
+    }
+    .minimap-move-forest {
+      top: -15vmin;
+    }
+    .minimap-move-profile {
+      top: 10vmin;
+    }
+  }
+}
+:focus-visible {
+  outline: none;
+}
+
+// ==============================> 알림창
+
+.alarm-modal-box {
+  // 하단 리스트
+  .alarm-modal-img-con {
+    width: 90%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    overflow-y: scroll;
+    .alarm-item {
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.909);
+      border-radius: 1.5vmin;
+      display: flex;
+      align-items: center;
+      font-size: 19px;
+      color: $purple200;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.snack-bar{
+  .MuiPaper-root{
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+  }
+  .MuiSnackbarContent-message{
+    font-size: 1.3rem;
+    width: 100%;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.4);
+  background-color: #9CCC65;
+  width: 40%;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  border-radius: 4px;
+}

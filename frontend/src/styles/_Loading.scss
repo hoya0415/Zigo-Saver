@@ -1,0 +1,52 @@
+// ==========================================> Loading
+
+.enter-loading {
+  position: absolute;
+  top: calc(50% - 35vmin);
+  left: calc(50% - 45vmin);
+  animation: fadein 1s;
+  width: 90vmin;
+  height: 70vmin;
+
+  .MuiLinearProgress-barColorPrimary {
+    background-color: $purple100;
+    height: 4.5vmin;
+  }
+  .MuiLinearProgress-colorPrimary {
+    height: 4.5vmin;
+    background-color: #fff;
+    box-shadow: -4px 0 $purple100, 0 4px $purple100, 4px 0 $purple100,
+      0 -4px $purple100;
+  }
+  .MuiTypography-root {
+    font-size: 4.5vmin;
+    font-family: 'Dung';
+    font-weight: bold;
+    color: $purple100;
+    text-shadow: -3px 0 #fff, 0 3px #fff, 3px 0 #fff, 0 -3px #fff;
+  }
+  .tutorial {
+    width: 85vmin;
+    height: 60vmin;
+    text-align: center;
+    animation: fadein 1s;
+    img {
+      width: 90%;
+      height: 75%;
+      object-fit: cover;
+      margin: 3vmin auto;
+      border-radius: 2.5vmin;
+    }
+    h3 {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      font-size: 2.5vmin;
+      padding: 2vmin;
+      color: $purple100;
+      text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
+      background-color: rgba(255, 255, 255, 0.826);
+      border-radius: 1vmin;
+    }
+  }
+}
